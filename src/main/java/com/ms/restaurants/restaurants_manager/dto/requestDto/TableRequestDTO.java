@@ -17,4 +17,7 @@ public class TableRequestDTO {
     @NotBlank
     private String qrCode;
 
+    @NotBlank
+    private String tableNo;
+
 }

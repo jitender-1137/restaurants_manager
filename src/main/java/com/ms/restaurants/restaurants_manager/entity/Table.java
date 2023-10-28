@@ -27,6 +27,8 @@ public class Table {
     private String status; // occupied, available
     @Column(name = "qr_code")
     private String qrCode;
+    @Column(name = "table_no")
+    private String tableNo;
     @Column(name = "created_by")
     private String createdBy;
     @Column(name = "created_at")

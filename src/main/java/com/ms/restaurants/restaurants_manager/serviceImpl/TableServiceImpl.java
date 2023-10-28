@@ -40,6 +40,7 @@ public class TableServiceImpl implements TableService {
         table.setCapacity(tableRequestDTO.getCapacity());
         table.setQrCode(tableRequestDTO.getQrCode());
         table.setStatus("available"); // Assuming a new table is always available
+        table.setTableNo(tableRequestDTO.getTableNo());
         Table savedTable = tableRepository.save(table);
         return convertToResponseDTO(savedTable);
     }
@@ -52,6 +53,7 @@ public class TableServiceImpl implements TableService {
         table.setTableName(tableRequestDTO.getTableName());
         table.setCapacity(tableRequestDTO.getCapacity());
         table.setQrCode(tableRequestDTO.getQrCode());
+        table.setTableNo(tableRequestDTO.getTableNo());
 
         Table updatedTable = tableRepository.save(table);
         return convertToResponseDTO(updatedTable);
@@ -69,6 +71,7 @@ public class TableServiceImpl implements TableService {
         responseDTO.setCapacity(table.getCapacity());
         responseDTO.setStatus(table.getStatus());
         responseDTO.setQrCode(table.getQrCode());
+        responseDTO.setTableNo(table.getTableNo());
         return responseDTO;
     }
 }

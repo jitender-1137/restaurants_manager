@@ -13,6 +13,5 @@ public class TableResponseDTO {
     private int capacity;
     private String status; // occupied, available
     private String qrCode;
-
-    // Getters and setters
+    private String tableNo;
 }
